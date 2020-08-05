@@ -1,8 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 
-import './App.css';
 import Card from './components/Card';
+import { SearchBar } from './components/SearchBar';
+import { Header } from './layout/Header';
 
 export interface GithubData {
   data: any;
@@ -25,7 +26,8 @@ const App = ({ data, users }: GithubData) => {
 
   return (
     <div className='App'>
-      <h1> hello</h1>
+      <Header />
+      <SearchBar />
       <Card users={state} />
     </div>
   );
