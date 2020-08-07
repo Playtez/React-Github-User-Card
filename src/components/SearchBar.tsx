@@ -24,7 +24,7 @@ export const SearchBar = () => {
           ref={refInput}
           id='input'
           type='text'
-          placeholder='press / to focus'
+          placeholder='press "/" to focus'
         />
       </div>
       <FaSearch />

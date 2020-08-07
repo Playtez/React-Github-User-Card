@@ -32,12 +32,5 @@
     "jest",
     "src/setupTests.ts"
   ],
-  "include": [
-    "src",
-    "src/tailwind.config.js",
-    "index.js",
-    "react-app-env.d.ts",
-    "App.test.js",
-    "App.tsx"
-  ]
+  "include": ["src"]
 }

@@ -1,16 +1,16 @@
 import React from 'react';
 import axios from 'axios';
 
-import Card from './components/Card';
-import { SearchBar } from './components/SearchBar';
-import { Header } from './layout/Header';
+import Card from './src/components/Card';
+import { SearchBar } from './src/components/SearchBar';
+import { Header } from './src/layout/Header';
 
 export interface GithubData {
   data: any;
   users: Array<object>;
 }
 
-const App = ({ data, users }: GithubData) => {
+export const App = ({ data, users }: GithubData) => {
   const [state, setState] = React.useState<typeof users | undefined>();
 
   React.useEffect(() => {
@@ -32,5 +32,3 @@ const App = ({ data, users }: GithubData) => {
     </div>
   );
 };
-
-export default App;
