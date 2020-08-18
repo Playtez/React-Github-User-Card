@@ -1,31 +1,12 @@
 import React from 'react';
 import { SearchBar } from 'src/components/SearchBar';
-import axios from 'axios';
 import { ReactTable } from './ReactTable';
 
 export interface GithubData {
-  data: any;
-  users: Array<object>;
+  state: any;
 }
 
-export const Dashboard = () => {
-  const [state, setState] = React.useState<typeof undefined>();
-
-  React.useEffect(() => {
-    axios
-      .get('https://swapi.dev/api/people')
-      .then((res) => {
-        setState(res.data.results);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
-  if (!state) {
-    return <h1>Loading... </h1>;
-  }
-
+export const Dashboard = ({ state }: GithubData) => {
   return (
     <div>
       <header className='bg-white shadow'>
